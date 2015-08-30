@@ -122,13 +122,13 @@ describe JavaBuildpack::Framework::JavaOpts do
     end
   end
 
-#  context do
-#    let(:configuration) { { 'java_opts' => '-XX:MetaspaceSize=128M' } }
-#
-#   it 'raises an error if a -XX:MetaspaceSize is configured' do
-#      expect { component.compile }.to raise_error(/-XX:MetaspaceSize/)
-#    end
-#  end
+  context do
+    let(:configuration) { { 'java_opts' => '-XX:MetaspaceSize=128M' } }
+
+   it 'raises an error if a -XX:MetaspaceSize is configured' do
+      expect { component.compile }.to raise_error(/-XX:MetaspaceSize/)
+    end
+  end
 
   context do
     let(:configuration) { { 'java_opts' => '-XX:MaxPermSize=128M' } }
